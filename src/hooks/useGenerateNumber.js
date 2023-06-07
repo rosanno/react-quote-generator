@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
-export const useGenerateNumber = (data) => {
+export const useGenerateNumber = () => {
   const [randomNumber, setRandomNumber] = useState(null);
 
   const generateRandomNumber = () => {
-    const randomNum = Math.floor(Math.random() * data);
+    const randomNum = Math.floor(Math.random() * 30);
     setRandomNumber(randomNum);
   };
 
   useEffect(() => {
     generateRandomNumber();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {
