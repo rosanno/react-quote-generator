@@ -3,9 +3,9 @@ import { useGenerateNumber } from "../hooks/useGenerateNumber";
 import Loader from "./Loader";
 
 const Card = (props) => {
-  const { randomNumber, generateRandomNumber } = useGenerateNumber();
-
-  console.log(props?.quotes && props?.quotes[randomNumber])
+  const { randomNumber, generateRandomNumber } = useGenerateNumber(
+    props.quotes.length
+  );
 
   return (
     <div className="bg-white shadow-md rounded-md w-[650px] h-auto px-6 py-10 flex flex-col justify-center items-center">
