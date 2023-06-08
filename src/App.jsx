@@ -5,7 +5,7 @@ const App = () => {
   const { quote, loading } = useGetQuote("https://dummyjson.com/quotes");
 
   return (
-    <div className="bg-slate-800 w-full h-screen overflow-hidden flex flex-col justify-center items-center">
+    <div className="bg-slate-800 bg-pattern w-full h-screen overflow-hidden flex flex-col justify-center items-center">
       <Card {...quote} loading={loading} />
     </div>
   );

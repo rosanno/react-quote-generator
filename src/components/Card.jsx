@@ -3,10 +3,10 @@ import { useGenerateNumber } from "../hooks/useGenerateNumber";
 import Loader from "./Loader";
 
 const Card = (props) => {
-  const { randomNumber, generateRandomNumber } = useGenerateNumber(props);
+  const { randomNumber, generateRandomNumber } = useGenerateNumber();
 
   return (
-    <div className="bg-white shadow-md rounded-md w-[650px] h-auto px-6 py-10 flex flex-col justify-center items-center">
+    <div className="bg-white shadow-lg rounded-md w-[650px] h-auto px-6 py-10 flex flex-col justify-center items-center">
       {props.loading ? (
         <Loader />
       ) : (
